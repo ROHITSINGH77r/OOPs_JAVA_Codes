@@ -1,18 +1,20 @@
-class Student {
-
-    public void printStudent(String studentClass) {
-        System.out.println("Student class: " + studentClass);
-    }
-
-    public void printStudent(String name, int age) {
-        System.out.println("Student name: " + name);
-        System.out.println("Student age: " + age);
-    }
-
-    public static void main(String[] args) {
-        Student obj = new Student();
-
-        obj.printStudent("AI-Z");
-        obj.printStudent("abcd", 200);
+class studentarray {
+    public int roll_no;
+    public String name;
+    studentarray(int roll_no,String name){
+        this.roll_no=roll_no;
+        this.name=name;
+    }    
+}
+public class Student{
+    public static void main(String[]args){
+        studentarray[] arr;
+        arr=new studentarray[3];
+        arr[0]=new studentarray(1,"a");
+        arr[1]=new studentarray(2,"b");
+        arr[2]=new studentarray(3,"c");
+        for(int i=0;i<arr.length;i++){
+            System.out.println("element at " + i +": {" + arr[i].roll_no + " " + arr[i].name+"}");
+        }
     }
 }
